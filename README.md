@@ -1,2 +1,2 @@
 # bmfti
-BM FTI (Faculty of Computer Science) Landing Page
+BM FTI (Faculty of Information Technology) Landing Page
