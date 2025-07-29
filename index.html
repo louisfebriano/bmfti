@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMFTI - Organisasi Mahasiswa Teknologi</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/874eb5c32f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="hero-parallax">
+      <div class="hero-content">
+        <h1 class="fade-in">BMFTI</h1>
+        <p class="fade-in">Organisasi Mahasiswa Fakultas Teknologi Informasi</p>
+      </div>
+    </header>
+
+    <nav id="navbar" class="fade-in">
+      <div class="nav-brand">BMFTI</div>
+      <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+      <div class="nav-links">
+        <a href="javascript:void(0);" onclick="toggleTheme()">
+          <i class="fa-solid fa-moon"></i>
+        </a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#struktur">Struktur Organisasi</a>
+        <a href="#daftar">Pendaftaran</a>
+      </div>
+    </nav>
+
+
+    <section id="about" class="fade-in">
+      <h2>Tentang Kami</h2>
+      <p>
+        <strong>BMFTI</strong> (Badan Mahasiswa Fakultas Teknologi Informasi)
+        adalah organisasi mahasiswa yang mewadahi pengembangan potensi akademik,
+        minat, dan bakat di bidang teknologi informasi. Kami menjadi rumah bagi
+        mahasiswa Fakultas Teknologi Informasi untuk berkarya, berkolaborasi,
+        dan berinovasi melalui berbagai program kerja dan kegiatan kreatif.
+      </p>
+      <p>
+        Didirikan atas semangat kebersamaan dan visi untuk menjadikan mahasiswa
+        teknologi sebagai pelopor perubahan digital di lingkungan kampus, BMFTI
+        aktif menyelenggarakan seminar, pelatihan, kompetisi, hingga pengabdian
+        masyarakat berbasis teknologi.
+      </p>
+      <p>
+        Dengan semangat “<em>Menginspirasi, Berkarya, dan Berteknologi</em>”,
+        BMFTI siap menjadi jembatan antara pengetahuan akademik dan praktik
+        nyata di dunia teknologi informasi.
+      </p>
+    </section>
+
+    <hr />
+
+    <section id="struktur" class="struktur fade-in">
+      <h2>Struktur Organisasi</h2>
+      <div class="struktur-grid">
+        <div class="card" class="fade-in">
+          <img src="assets/profile8.jpg" alt="Ketua BMFTI" />
+          <h3>Ketua</h3>
+          <p>Louis Febriano</p>
+        </div>
+        <div class="card" class="fade-in">
+          <img src="assets/profile2.jpg" alt="Wakil Ketua" />
+          <h3>Wakil Ketua</h3>
+          <p>Salsa Rahma</p>
+        </div>
+        <div class="card" class="fade-in">
+          <img src="assets/profile5.jpg" alt="Koordinator Acara" />
+          <h3>Koordinator Acara</h3>
+          <p>Yusuf Hadi</p>
+        </div>
+        <div class="card fade-in">
+          <img src="assets/profile4.jpg" alt="Sekretaris" />
+          <h3>Sekretaris</h3>
+          <p>Dina Ramadhani</p>
+        </div>
+        <div class="card fade-in">
+          <img src="assets/profile7.jpg" alt="Bendahara" />
+          <h3>Bendahara</h3>
+          <p>Fajar Prasetyo</p>
+        </div>
+        <div class="card fade-in">
+          <img src="assets/profile6.jpg" alt="Koordinator Humas" />
+          <h3>Koordinator Humas</h3>
+          <p>Nadia Aulia</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <section id="daftar" class="fade-in form-section">
+      <h2 class="form-title">Formulir Pendaftaran</h2>
+      <form
+        id="formDaftar"
+        class="form-container"
+        onsubmit="return validateForm()"
+      >
+        <div class="form-group">
+          <label for="nama" class="form-label">Nama Lengkap:</label>
+          <input type="text" id="nama" class="form-input" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="form-label">Email:</label>
+          <input type="email" id="email" class="form-input"  required />
+        </div>
+
+        <div class="form-group">
+          <label for="prodi" class="form-label">Program Studi:</label>
+          <input type="text" id="prodi" class="form-input" required />
+        </div>
+
+        <button type="submit" class="form-button">Daftar</button>
+      </form>
+    </section>
+    
+
+    <footer>
+      <p>© 2025 BMFTI. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+
+  <script
+    src="https://kit.fontawesome.com/yourcode.js"
+    crossorigin="anonymous"
+  ></script>
+</html>

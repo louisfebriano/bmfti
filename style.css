@@ -1,0 +1,337 @@
+
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --card: #f0f0f0;
+  /* Primary Colors */
+  --color-primary: #8230e0;     
+  --color-secondary: #4b0e91;     
+
+}
+
+
+
+body.dark {
+  --bg: #121212;
+  --text: #ffffff;
+  --card: #1e1e1e;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+html {
+  scroll-behavior: smooth;
+
+}
+header.hero {
+  text-align: center;
+  padding: 2rem;
+}
+
+header.hero img {
+  max-width: 100%;
+  height: auto;
+}
+
+nav {
+  background: var(--color-primary);
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 1rem;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  padding: 2rem;
+}
+
+.struktur-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.struktur h2{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: #ccc; /* Warna garis */
+  margin: 5rem;          /* Jarak atas & bawah */
+}
+
+
+#about {
+  max-width: 800px; /* Batas lebar agar tidak terlalu panjang */
+  margin: 0 auto; /* Center secara horizontal */
+  padding: 2rem 1rem;
+  text-align: justify; /* (Opsional) agar teks rata kanan-kiri */
+}
+
+#about h2 {
+  text-align: center; /* Judul di tengah */
+  margin-bottom: 1rem;
+}
+
+.card {
+  background: var(--card, #f0f0f0);
+  padding: 1rem;
+  border-radius: 12px;
+  width: 25rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+}
+
+.form-container {
+  background: var(--card, #f0f0f0);
+  padding: 1rem;
+  border-radius: 12px;
+  width: 25rem;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+
+.form-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-input {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.form-button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--color-primary);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: var(--color-secondary);
+}
+
+
+footer {
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  background: var(--color-primary);
+  margin-top: 2rem;
+}
+.hero-parallax {
+  height: 100vh;
+  background-image: url('assets/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero-parallax::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4); 
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 2rem;
+  background: rgba(0, 0, 0, 0); 
+  backdrop-filter: blur(10px);
+  color: white;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: top 0.3s ease, background 0.3s ease;
+}
+
+#navbar.scrolled {
+  padding: 2rem 2rem;
+  background: var(--color-primary, #3c096c);
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: inherit;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+#navbar a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+#navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+#navbar a:hover {
+  color: #ffffff;
+}
+
+#navbar a:hover::after {
+  transform: scaleX(1);
+}
+
+
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: inherit;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+  #navbar a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background:var(--color-primary);
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+
+/* Responsive */
+@media (max-width: 600px) {
+  .struktur-grid {
+    flex-direction: column;
+  }
+
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+}
